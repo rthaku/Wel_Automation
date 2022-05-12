@@ -1,6 +1,6 @@
-const { expect} = require("@playwright/test");
+const {expect} = require("@playwright/test");
 
-class LoginPage {
+class LoginToMyAccount {   
 
     constructor(page)
     {
@@ -9,11 +9,10 @@ class LoginPage {
         this.password = page.locator("#password");
         this.logInButton = page.locator("[value='LOG IN']");
         this.productPageTitle = page.locator('.product-page-title');
-        this.title =page.locator('.title');
+        this.title =page.locator('.title');       
     }
 
-    async loginToMyAccount(username, password)
-    
+    async Login(username,password)
     {
         await this.page.goto("https://login.non-prod.efficientlearning.com/wel/login");
         await this.userName.type(username);
@@ -24,4 +23,4 @@ class LoginPage {
     }
 }
 
-module.exports= {LoginPage};
+module.exports= {LoginToMyAccount};

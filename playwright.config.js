@@ -21,7 +21,7 @@ const config = {
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 12000
+    timeout: 25000
   },
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
@@ -51,19 +51,19 @@ const config = {
       },
     },
 
-    {
-      name: 'firefox',
-      use: {
-        ...devices['Desktop Firefox'],
-      },
-    },
+  //  {
+   //   name: 'firefox',
+   //   use: {
+   //     ...devices['Desktop Firefox'],
+  //    },
+   // },
 
-    {
-      name: 'webkit',
-      use: {
-        ...devices['Desktop Safari'],
-      },
-    },
+   // {
+    //  name: 'webkit',
+   //   use: {
+   //     ...devices['Desktop Safari'],
+  //    },
+  //  },
 
     /* Test against mobile viewports. */
     // {
