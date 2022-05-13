@@ -18,7 +18,7 @@ class LoginToMyAccount {
         await this.userName.type(username);
         await this.password.type(password);
         await this.logInButton.click();
-        await expect(this.page).toHaveURL(/.*my-account/);
+        await expect(this.page).toHaveURL(/.*my-account/,{timeout:5000});
         await expect(this.title).toHaveText(/Welcome, .*/);
     }
 }
