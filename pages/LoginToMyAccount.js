@@ -1,7 +1,7 @@
-const {expect} = require("@playwright/test");
+const {expect} = require('@playwright/test');
 
 class LoginToMyAccount {   
-
+    
     constructor(page)
     {
         this.page = page;
@@ -14,7 +14,6 @@ class LoginToMyAccount {
 
     async Login(username,password)
     {
-        await this.page.goto("https://login.non-prod.efficientlearning.com/wel/login");
         await this.userName.type(username);
         await this.password.type(password);
         await this.logInButton.click();

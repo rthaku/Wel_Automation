@@ -1,7 +1,7 @@
 
 class GoToWelLoginPage {
 
-  async welLoginPage(browser) {     
+        async welLoginPage(browser) {     
         const context= await browser.newContext();
         const page = await context.newPage();
        

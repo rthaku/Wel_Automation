@@ -28,7 +28,7 @@ const config = {
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
  // reporter: 'html',
   reporter: [
@@ -55,19 +55,19 @@ const config = {
       },
     },
 
-  //  {
-   //   name: 'firefox',
-   //   use: {
-   //     ...devices['Desktop Firefox'],
-  //    },
-   // },
+  {
+   name: 'firefox',
+    use: {
+      ...devices['Desktop Firefox'],
+    },
+  },
 
-   // {
-    //  name: 'webkit',
-   //   use: {
-   //     ...devices['Desktop Safari'],
-  //    },
-  //  },
+// {
+ //    name: 'Microsoft Edge',
+  //   use: {
+  //     ...devices['msedge'],
+  //   },
+  // },
 
     /* Test against mobile viewports. */
     // {
@@ -106,7 +106,6 @@ const config = {
   //   command: 'npm run start',
   //   port: 3000,
   // },
-
 
 };
 

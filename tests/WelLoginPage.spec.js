@@ -1,17 +1,23 @@
-const { test, expect} = require("@playwright/test");  // required to import this module so we can run the test
+const {expect} = require("@playwright/test");
+const { FlyoutMenu } = require("../pages/flyoutMenu");
 const { LaunchProduct } = require("../pages/LaunchProduct");
 const {LoginToMyAccount}= require('../pages/LoginToMyAccount');
-
-test('Log to MyAccount and Launch Product', async function ({page}) {
+const loginDetails=JSON.parse(JSON.stringify(require('../Utilities/loginData.json')));
+const {test} =require('../Utilities/WelLoginURL');
+    
+test.only('Log to MyAccount and Launch Product', async function ({page, url}) {
 
   const login = new LoginToMyAccount(page);
   const launch= new LaunchProduct(page);
-  const username = "rajshr.72+alm2@gmail.com";
-  const password = "Password@1234";
+  const flyoutmenu = new FlyoutMenu(page);
+  
     
-    
-    await login.Login(username, password);
+    await page.goto(url);    
+    await login.Login(loginDetails.username, loginDetails.password);
     await launch.launchProduct();
+    await flyoutmenu.clickOnFlashcards();
+    await flyoutmenu.clickOnMetric();
+    await flyoutmenu.clickOnSyllabus();
+    await flyoutmenu.clickOnNotesHighlights();
     
   });
-

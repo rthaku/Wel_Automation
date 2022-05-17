@@ -1,7 +1,7 @@
 const { expect } = require("@playwright/test");
 const { timeout } = require("../playwright.config");
 
-class LaunchProduct {
+    class LaunchProduct {
 
     constructor(page)
     {
