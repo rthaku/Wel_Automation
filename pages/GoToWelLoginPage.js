@@ -1,4 +1,3 @@
-const { browser } = require("@playwright/test");
 
 class GoToWelLoginPage {
 
@@ -16,9 +15,7 @@ class GoToWelLoginPage {
         await page.locator("#password").type(passWord);
         await page.locator("[value='LOG IN']").click();
         return page;
-        
         }
 
    }      
-
 module.exports= {GoToWelLoginPage};

@@ -1,6 +1,6 @@
 const {expect} = require("@playwright/test");
 
-class FlyoutMenu{   
+class FlyoutMenu {   
     
     constructor(page)
     {

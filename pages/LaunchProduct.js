@@ -1,6 +1,4 @@
 const { expect } = require("@playwright/test");
-const { timeout } = require("../playwright.config");
-const { GoToWelLoginPage } = require("./GoToWelLoginPage");
 
     class LaunchProduct  {
  

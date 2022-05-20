@@ -1,4 +1,3 @@
-const {expect} = require("@playwright/test");
 const { FlyoutMenu } = require("../pages/flyoutMenu");
 const { LaunchProduct } = require("../pages/LaunchProduct");
 const {LoginToMyAccount}= require('../pages/LoginToMyAccount');
