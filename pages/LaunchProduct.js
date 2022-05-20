@@ -1,9 +1,11 @@
 const { expect } = require("@playwright/test");
 const { timeout } = require("../playwright.config");
+const { GoToWelLoginPage } = require("./GoToWelLoginPage");
 
-    class LaunchProduct {
-
+    class LaunchProduct  {
+ 
     constructor(page)
+    
     {
         this.page = page;
         this.goToCourse = page.locator('.btn-primary');

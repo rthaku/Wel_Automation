@@ -5,7 +5,8 @@ const {LoginToMyAccount}= require('../pages/LoginToMyAccount');
 const loginDetails=JSON.parse(JSON.stringify(require('../Utilities/loginData.json')));
 const {test} =require('../Utilities/WelLoginURL');
     
-test.only('Log to MyAccount and Launch Product', async function ({page, url}) {
+
+test('Log to MyAccount and Launch Product', async function ({page, url}) {
 
   const login = new LoginToMyAccount(page);
   const launch= new LaunchProduct(page);
