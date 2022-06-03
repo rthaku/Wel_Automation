@@ -17,7 +17,10 @@ const { expect } = require("@playwright/test");
        await expect(this.eulabutton).toBeVisible({true:35000});
        await this.eulabutton.click();
        await expect(this.page).toHaveURL(/.*dashboard/, {timeout:15000});
+       return this.page;
     }
+
+   
 }
 
 module.exports= {LaunchProduct};

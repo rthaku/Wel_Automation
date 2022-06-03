@@ -1,6 +1,7 @@
 const {expect} = require("@playwright/test");
+const { SyllabusPage } = require("./SyllabusPage");
 
-class FlyoutMenu {   
+class NavigationPage {   
     
     constructor(page)
     {
@@ -10,6 +11,7 @@ class FlyoutMenu {
         this.notesHighlights = page.locator('text=Notes & Highlights');
         this.flashcards = page.locator('text=Flashcards');
         this.metrics= page.locator('text=Metrics');
+        this.testbank = page.locator('span:has-text("Test Bank")');
     }
     
     async clickOnSyllabus()
@@ -17,6 +19,7 @@ class FlyoutMenu {
        await this.mainNavigation.click();
        await expect (this.syllabus).toBeVisible();
        await this.syllabus.click()
+       return SyllabusPage;
     }
 
     async clickOnNotesHighlights()
@@ -40,6 +43,15 @@ class FlyoutMenu {
        await this.metrics.click();
     }
 
+    async clickOnTestBankIcon()
+    {
+      await this.mainNavigation.click();
+       await expect (this.testbank).toBeVisible();
+       await this.testbank.click();
+    }
+
+
+
 }
 
-module.exports= {FlyoutMenu};
+module.exports= {NavigationPage};

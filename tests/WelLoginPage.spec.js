@@ -1,4 +1,4 @@
-const { FlyoutMenu } = require("../pages/flyoutMenu");
+const { FlyoutMenu } = require("../pages/NavigationPage");
 const { LaunchProduct } = require("../pages/LaunchProduct");
 const {LoginToMyAccount}= require('../pages/LoginToMyAccount');
 const loginDetails=JSON.parse(JSON.stringify(require('../Utilities/loginData.json')));

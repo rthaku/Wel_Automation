@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 const { devices } = require('@playwright/test');
 
 /**
