@@ -1,11 +1,9 @@
 const { ExamPage } = require("./ExamPage");
 
 
-class GenericUIPage extends ExamPage {
+class GenericUIPage {
 
-    constructor(page) {
-         super(page);     
-    
+    constructor(page) {   
         const exampage= new ExamPage(page);
         this.end = page.locator('.cta_button.end');
         this.saveandquit = page.locator('button[role="button"]:has-text("Save and Quit")');
