@@ -26,6 +26,5 @@ exports.SyllabusPage = class SyllabusPage {
   async clickOnBeginAssessment() {
     await expect(this.beginAssessment).toBeVisible();
     await this.beginAssessment.click();
-    return this.page;
   }
 }
