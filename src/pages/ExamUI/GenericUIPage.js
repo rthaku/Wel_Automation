@@ -1,10 +1,7 @@
-const {AbstractExamPage} = require("./AbstractExamPage");
+const {expect} = require("@playwright/test");
 
-
-exports.GenericUIPage = class GenericUIPage extends AbstractExamPage {
-
+exports.GenericUIPage = class GenericUIPage {
   constructor(page) {
-    super(page);
     this.end = page.locator('.cta_button.end');
     this.saveandquit = page.locator('button[role="button"]:has-text("Save and Quit")');
     this.answerrow = page.locator('tr[class=answer_row]');
