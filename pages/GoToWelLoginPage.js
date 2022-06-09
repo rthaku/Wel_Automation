@@ -18,4 +18,4 @@ class GoToWelLoginPage {
         }
 
    }      
-module.exports= {GoToWelLoginPage};
+module.exports= {GoToWelLoginPage}
