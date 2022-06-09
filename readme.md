@@ -14,3 +14,8 @@ npx playwright test login.spec.js
 ```shell
 npx playwright test --debug
 ```
+### provide credentials
+replace asterisks with real data
+```shell
+PLAYWRIGHT_USERNAME='*********' PLAYWRIGHT_PASSWORD="*********" npx playwright test base-ui.spec.js --debug
+```
