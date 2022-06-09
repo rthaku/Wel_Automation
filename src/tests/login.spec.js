@@ -7,20 +7,20 @@ const {FlyOutMenuPage} = require("../pages/FlyOutMenuPage");
 
 
 test.describe('My Product', () => {
-  test('Log to MyAccount and Launch Product', async ({page}) => {
-    await page.goto(url);
-    const loginPage = new LoginPage(page);
-    await loginPage.login(credentials);
-    await loginPage.awaitMyAccount();
+    test('Log to MyAccount and Launch Product', async ({page}) => {
+        await page.goto(url);
+        const loginPage = new LoginPage(page);
+        await loginPage.login(credentials);
+        await loginPage.awaitMyAccount();
 
-    const myAccountPage = new MyAccountPage(page);
-    await myAccountPage.launchProduct();
-    await myAccountPage.acceptEULA()
+        const myAccountPage = new MyAccountPage(page);
+        await myAccountPage.launchProduct();
+        await myAccountPage.acceptEULA()
 
-    const flyOutMenuPage = new FlyOutMenuPage(page);
-    await flyOutMenuPage.clickOnFlashcards();
-    await flyOutMenuPage.clickOnMetric();
-    await flyOutMenuPage.clickOnSyllabus();
-    await flyOutMenuPage.clickOnNotesHighlights();
-  })
+        const flyOutMenuPage = new FlyOutMenuPage(page);
+        await flyOutMenuPage.clickOnFlashcards();
+        await flyOutMenuPage.clickOnMetric();
+        await flyOutMenuPage.clickOnSyllabus();
+        await flyOutMenuPage.clickOnNotesHighlights();
+    })
 });

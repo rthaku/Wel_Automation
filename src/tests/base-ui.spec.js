@@ -8,28 +8,28 @@ const {SyllabusPage} = require("../pages/SyllabusPage");
 const {GenericUIPage} = require("../pages/ExamUI/GenericUIPage");
 
 test.describe('Description of the suite', () => {
-  test.only('Login to MyAccount', async ({browser, page,}) => {
+    test.only('Login to MyAccount', async ({browser, page,}) => {
 
-    await page.goto(url);
-    const loginPage = new LoginPage(page);
-    await loginPage.login(credentials);
-    await loginPage.awaitMyAccount();
+        await page.goto(url);
+        const loginPage = new LoginPage(page);
+        await loginPage.login(credentials);
+        await loginPage.awaitMyAccount();
 
-    const myAccountPage = new MyAccountPage(page);
-    await myAccountPage.launchProduct();
-    await myAccountPage.acceptEULA()
+        const myAccountPage = new MyAccountPage(page);
+        await myAccountPage.launchProduct();
+        await myAccountPage.acceptEULA()
 
-    const flyOutMenuPage = new FlyOutMenuPage(page);
-    await flyOutMenuPage.clickOnSyllabus();
+        const flyOutMenuPage = new FlyOutMenuPage(page);
+        await flyOutMenuPage.clickOnSyllabus();
 
-    const syllabus = new SyllabusPage(page);
-    await syllabus.clickOnExpandAll();
-    await syllabus.clickOnLessonAssignment();
-    await syllabus.clickOnTakeAssessment();
-    await syllabus.clickOnBeginAssessment();
+        const syllabus = new SyllabusPage(page);
+        await syllabus.clickOnExpandAll();
+        await syllabus.clickOnLessonAssignment();
+        await syllabus.clickOnTakeAssessment();
+        await syllabus.clickOnBeginAssessment();
 
-    const genericUI = new GenericUIPage(page);
-    await genericUI.submitWithSaving();
-  });
+        const genericUI = new GenericUIPage(page);
+        await genericUI.submitWithSaving();
+    });
 });
 
