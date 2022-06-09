@@ -4,3 +4,4 @@ playwright-report/
 allure-results/
 **/*.iml
 .idea/
+**/.DS_Store
