@@ -1,1 +1,1 @@
-exports.url = 'https://login.non-prod.efficientlearning.com/wel/login'
+exports.url = process.env.PLAYWRIGHT_URL;

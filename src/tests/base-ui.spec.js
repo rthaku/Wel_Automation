@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 const {url} = require('../consts/url');
-const credentials = require('../consts/credentials.json');
+const {credentials} = require('../consts/credentials');
 const {LoginPage} = require("../pages/LoginPage");
 const {MyAccountPage} = require("../pages/MyAccountPage");
 const {FlyOutMenuPage} = require("../pages/FlyOutMenuPage");
