@@ -1,6 +1,6 @@
 const {expect} = require("@playwright/test");
 
-class LoginPage {
+exports.WelTools_LoginPage = class WelTools_LoginPage {
 
     constructor(page) {
         this.page = page;
@@ -10,8 +10,7 @@ class LoginPage {
         this.loggedUser = page.locator('text=Welcome')
     }
 
-    async navigate(email, password) {
-        await page.goto('https://services-internal.non-prod.efficientlearning.com/wel-tools/login');
+    async loginToWelTools({email, password}) {
         await this.userName.type(email);
         await this.passWord.type(password);
         await this.signIn.click();
@@ -19,5 +18,3 @@ class LoginPage {
     }
 
 }
-
-module.exports = {LoginPage};
