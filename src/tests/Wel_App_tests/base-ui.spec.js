@@ -8,8 +8,8 @@ const {FlyOutMenuPage} = require("../../pages/FlyOutMenuPage");
 const {SyllabusPage} = require("../../pages/SyllabusPage");
 const {GenericUIPage} = require("../../pages/ExamUI/GenericUIPage");
 
-test.describe('Description of the suite', () => {
-    test('Login to MyAccount', async ({page}) => {
+test.describe('Assessment-Generic UI', () => {
+    test('Take Lesson Assessment', async ({page}) => {
 
         await page.goto(url);
         const basePage = new BasePage(page);
