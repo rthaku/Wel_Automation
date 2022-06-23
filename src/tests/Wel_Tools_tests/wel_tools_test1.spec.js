@@ -13,6 +13,7 @@ test.describe('Wel Tools', () => {
 
         const consumerPage = new ConsumerPage(page)
         await consumerPage.clickOnConsumerBtn();
+        await consumerPage.verifyConsumerColumns();
         await consumerPage.clickOnPlusConsumerBtn();
         await consumerPage.rowsPerPageDetails();
         await consumerPage.footerDetails();

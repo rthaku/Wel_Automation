@@ -1,7 +1,7 @@
 {
   "name": "wel_automation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wel Automation-Playwright",
   "main": "index.js",
   "scripts": {
     "allure:generate": "npx allure generate ./allure-results --clean",
